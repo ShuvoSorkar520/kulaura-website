@@ -1,8 +1,76 @@
 
+import { useState } from 'react';
 import { Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useToast } from '@/hooks/use-toast';
+import { 
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage
+} from '@/components/ui/form';
+import { Textarea } from '@/components/ui/textarea';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import * as z from 'zod';
+
+// Define the schema for form validation
+const formSchema = z.object({
+  name: z.string().min(1, { message: "নাম আবশ্যক" }),
+  email: z.string().email({ message: "সঠিক ইমেইল দিন" }),
+  subject: z.string().min(1, { message: "বিষয় আবশ্যক" }),
+  message: z.string().min(10, { message: "কমপক্ষে ১০টি অক্ষর লিখুন" }),
+});
 
 const ContactSection = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Initialize the form
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
+  });
+
+  // Handle form submission
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    setIsSubmitting(true);
+    
+    try {
+      // Email sending simulation (in a real app, this would be an API call)
+      console.log("Sending email with data:", values);
+      
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Show success message
+      toast({
+        title: "সফলভাবে পাঠানো হয়েছে",
+        description: "আপনার মেসেজ সফলভাবে পাঠানো হয়েছে। আমরা শীঘ্রই আপনার সাথে যোগাযোগ করব।",
+      });
+      
+      // Reset form
+      form.reset();
+    } catch (error) {
+      // Show error message
+      toast({
+        title: "সমস্যা হয়েছে",
+        description: "মেসেজ পাঠাতে সমস্যা হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।",
+        variant: "destructive",
+      });
+      console.error("Error sending email:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -13,47 +81,87 @@ const ContactSection = () => {
 
         <div className="flex flex-col md:flex-row gap-12">
           <div className="md:w-1/2">
-            <form className="bg-white rounded-xl shadow-md p-8">
-              <div className="mb-6">
-                <label htmlFor="name" className="block text-gray-700 mb-2">আপনার নাম</label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50"
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="bg-white rounded-xl shadow-md p-8">
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem className="mb-6">
+                      <FormLabel className="block text-gray-700 mb-2">আপনার নাম</FormLabel>
+                      <FormControl>
+                        <input 
+                          {...field}
+                          className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50" 
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
                 />
-              </div>
-              
-              <div className="mb-6">
-                <label htmlFor="email" className="block text-gray-700 mb-2">ইমেইল</label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50"
+                
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem className="mb-6">
+                      <FormLabel className="block text-gray-700 mb-2">ইমেইল</FormLabel>
+                      <FormControl>
+                        <input 
+                          {...field}
+                          type="email" 
+                          className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50" 
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
                 />
-              </div>
-              
-              <div className="mb-6">
-                <label htmlFor="subject" className="block text-gray-700 mb-2">বিষয়</label>
-                <input 
-                  type="text" 
-                  id="subject" 
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50"
+                
+                <FormField
+                  control={form.control}
+                  name="subject"
+                  render={({ field }) => (
+                    <FormItem className="mb-6">
+                      <FormLabel className="block text-gray-700 mb-2">বিষয়</FormLabel>
+                      <FormControl>
+                        <input 
+                          {...field}
+                          className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50" 
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
                 />
-              </div>
-              
-              <div className="mb-6">
-                <label htmlFor="message" className="block text-gray-700 mb-2">মেসেজ</label>
-                <textarea 
-                  id="message" 
-                  rows={4}
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50"
-                ></textarea>
-              </div>
-              
-              <Button className="w-full bg-primary hover:bg-primary/90">
-                মেসেজ পাঠান
-              </Button>
-            </form>
+                
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem className="mb-6">
+                      <FormLabel className="block text-gray-700 mb-2">মেসেজ</FormLabel>
+                      <FormControl>
+                        <Textarea 
+                          {...field}
+                          rows={4}
+                          className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <Button 
+                  type="submit"
+                  className="w-full bg-primary hover:bg-primary/90"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'অপেক্ষা করুন...' : 'মেসেজ পাঠান'}
+                </Button>
+              </form>
+            </Form>
           </div>
 
           <div className="md:w-1/2">
