@@ -44,7 +44,7 @@ const HeroSection = () => {
               <div className="phone-mockup animate-float">
                 <div className="phone-screen">
                   <img 
-                    src="/public/lovable-uploads/d9db84df-f3da-419c-8618-a8363b6f8a22.png" 
+                    src="/lovable-uploads/d5fa39e7-f100-4f1f-93ee-6d2910ec90bb.png" 
                     alt="Kulabra App Screenshot"
                     className="w-full h-full object-cover"
                   />
