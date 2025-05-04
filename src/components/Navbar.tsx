@@ -1,10 +1,23 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu } from 'lucide-react';
+import { Menu, Download } from 'lucide-react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleDownload = () => {
+    // Replace this URL with your actual app download link
+    const downloadUrl = '/public/lovable-uploads/d9db84df-f3da-419c-8618-a8363b6f8a22.png';
+    
+    // Create an anchor element and trigger the download
+    const link = document.createElement('a');
+    link.href = downloadUrl;
+    link.download = 'kulabra-app.apk';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <header className="bg-white shadow-sm fixed w-full top-0 z-50">
@@ -21,7 +34,10 @@ const Navbar = () => {
           <a href="#login" className="text-gray-600 hover:text-primary transition-colors">Login</a>
           <a href="#team" className="text-gray-600 hover:text-primary transition-colors">Team</a>
           <a href="#contact" className="text-gray-600 hover:text-primary transition-colors">Contact</a>
-          <Button className="bg-primary hover:bg-primary/90">Download</Button>
+          <Button onClick={handleDownload} className="bg-primary hover:bg-primary/90 flex items-center gap-2">
+            <Download className="h-4 w-4" />
+            Download
+          </Button>
         </div>
         
         <div className="md:hidden">
@@ -42,7 +58,10 @@ const Navbar = () => {
             <a href="#login" className="text-gray-600 hover:text-primary transition-colors">Login</a>
             <a href="#team" className="text-gray-600 hover:text-primary transition-colors">Team</a>
             <a href="#contact" className="text-gray-600 hover:text-primary transition-colors">Contact</a>
-            <Button className="bg-primary hover:bg-primary/90 w-full">Download</Button>
+            <Button onClick={handleDownload} className="bg-primary hover:bg-primary/90 w-full flex items-center justify-center gap-2">
+              <Download className="h-4 w-4" />
+              Download
+            </Button>
           </nav>
         </div>
       )}

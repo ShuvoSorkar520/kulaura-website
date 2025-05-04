@@ -1,7 +1,21 @@
 
 import { Button } from '@/components/ui/button';
+import { Download } from 'lucide-react';
 
 const HeroSection = () => {
+  const handleDownload = () => {
+    // Replace this URL with your actual app download link
+    const downloadUrl = '/public/lovable-uploads/d9db84df-f3da-419c-8618-a8363b6f8a22.png';
+    
+    // Create an anchor element and trigger the download
+    const link = document.createElement('a');
+    link.href = downloadUrl;
+    link.download = 'kulabra-app.apk';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="home" className="bg-gradient-to-b from-white to-green-50 pt-24 md:pt-28 pb-12 md:pb-20">
       <div className="container mx-auto px-4">
@@ -15,7 +29,8 @@ const HeroSection = () => {
               আপনার মহল্লার সকল সুবিধা এবং তথ্য এখন আপনার হাতের মুঠোয়। ডাউনলোড করুন আমাদের অ্যাপ!
             </p>
             <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-              <Button className="bg-primary hover:bg-primary/90 text-lg px-8 py-6">
+              <Button onClick={handleDownload} className="bg-primary hover:bg-primary/90 text-lg px-8 py-6 flex items-center gap-2">
+                <Download className="h-5 w-5" />
                 অ্যাপ ডাউনলোড
               </Button>
               <Button variant="outline" className="border-primary text-primary hover:bg-primary/10 text-lg px-8 py-6">
