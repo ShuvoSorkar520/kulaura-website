@@ -4,8 +4,8 @@ import { Download } from 'lucide-react';
 
 const HeroSection = () => {
   const handleDownload = () => {
-    // Replace this URL with your actual app download link
-    const downloadUrl = '/public/lovable-uploads/d9db84df-f3da-419c-8618-a8363b6f8a22.png';
+    // Path to the app file in the public folder
+    const downloadUrl = '/kulabra-app.apk';
     
     // Create an anchor element and trigger the download
     const link = document.createElement('a');
