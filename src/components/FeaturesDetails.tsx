@@ -12,13 +12,12 @@ import {
   School,
   ShoppingBag,
   Ambulance,
-  Hospital,
+  Building,
   BookOpen,
-  Pharmacy,
+  Pill,
   Car,
   Droplets,
-  PackageOpen,
-  Restaurant
+  Package
 } from 'lucide-react';
 
 const FeaturesDetails = () => {
@@ -26,18 +25,18 @@ const FeaturesDetails = () => {
   
   const services = [
     { icon: <Building2 className="text-blue-500" />, name: "পুলিশ স্টেশন" },
-    { icon: <Hospital className="text-pink-500" />, name: "হাসপাতাল" },
+    { icon: <Building className="text-pink-500" />, name: "হাসপাতাল" },
     { icon: <Truck className="text-orange-500" />, name: "ফায়ার সার্ভিস" },
     { icon: <Ambulance className="text-cyan-500" />, name: "অ্যাম্বুলেন্স" },
     { icon: <UserRound className="text-purple-500" />, name: "ডাক্তার" },
     { icon: <ShoppingBag className="text-pink-500" />, name: "দোকান" },
-    { icon: <Restaurant className="text-yellow-500" />, name: "রেস্টুরেন্ট" },
+    { icon: <Truck className="text-yellow-500" />, name: "রেস্টুরেন্ট" },
     { icon: <BookOpen className="text-green-500" />, name: "টিউটর" },
-    { icon: <Pharmacy className="text-red-500" />, name: "ফার্মেসি" },
+    { icon: <Pill className="text-red-500" />, name: "ফার্মেসি" },
     { icon: <Car className="text-indigo-500" />, name: "রিজার্ভ ভেহিকেল" },
     { icon: <School className="text-teal-500" />, name: "শিক্ষা প্রতিষ্ঠান" },
     { icon: <Droplets className="text-red-600" />, name: "ব্লাড ডোনার" },
-    { icon: <PackageOpen className="text-brown-500" />, name: "কুরিয়ার সার্ভিস" },
+    { icon: <Package className="text-brown-500" />, name: "কুরিয়ার সার্ভিস" },
     { icon: <MapPin className="text-red-500" />, name: "ট্যুরিস্ট স্পট" }
   ];
 
