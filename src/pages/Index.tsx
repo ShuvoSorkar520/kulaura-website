@@ -3,7 +3,6 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import FeaturesSection from '@/components/FeaturesSection';
-import LoginSection from '@/components/LoginSection';
 import FeaturesDetails from '@/components/FeaturesDetails';
 import TeamSection from '@/components/TeamSection';
 import ContactSection from '@/components/ContactSection';
@@ -15,7 +14,6 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <FeaturesSection />
-      <LoginSection />
       <FeaturesDetails />
       <TeamSection />
       <ContactSection />
