@@ -1,12 +1,10 @@
-
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
-
 const HeroSection = () => {
   const handleDownload = () => {
     // Path to the app file in the public folder
     const downloadUrl = '/kulabra-app.apk';
-    
+
     // Create an anchor element and trigger the download
     const link = document.createElement('a');
     link.href = downloadUrl;
@@ -15,9 +13,7 @@ const HeroSection = () => {
     link.click();
     document.body.removeChild(link);
   };
-
-  return (
-    <section id="home" className="bg-gradient-to-b from-white to-green-50 pt-24 md:pt-28 pb-12 md:pb-20">
+  return <section id="home" className="bg-gradient-to-b from-white to-green-50 pt-24 md:pt-28 pb-12 md:pb-20">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
@@ -43,19 +39,13 @@ const HeroSection = () => {
             <div className="relative">
               <div className="phone-mockup animate-float">
                 <div className="phone-screen">
-                  <img 
-                    src="/lovable-uploads/d5fa39e7-f100-4f1f-93ee-6d2910ec90bb.png" 
-                    alt="Kulabra App Screenshot"
-                    className="w-full h-full object-cover"
-                  />
+                  <img src="/lovable-uploads/d5fa39e7-f100-4f1f-93ee-6d2910ec90bb.png" alt="Kulabra App Screenshot" className="w-full h-full object-cover" />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;

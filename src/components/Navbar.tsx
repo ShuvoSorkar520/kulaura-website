@@ -1,15 +1,12 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, Download } from 'lucide-react';
-
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const handleDownload = () => {
     // Path to the app file in the public folder
     const downloadUrl = '/kulabra-app.apk';
-    
+
     // Create an anchor element and trigger the download
     const link = document.createElement('a');
     link.href = downloadUrl;
@@ -18,14 +15,10 @@ const Navbar = () => {
     link.click();
     document.body.removeChild(link);
   };
-
-  return (
-    <header className="bg-white shadow-sm fixed w-full top-0 z-50">
+  return <header className="bg-white shadow-sm fixed w-full top-0 z-50">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="flex items-center">
-          <a href="/" className="text-lg font-bold text-primary flex items-center">
-            Kulabra.io
-          </a>
+          <a href="/" className="text-lg font-bold text-primary flex items-center">Kulaura Hub</a>
         </div>
         
         <div className="hidden md:flex items-center space-x-6">
@@ -41,17 +34,13 @@ const Navbar = () => {
         </div>
         
         <div className="md:hidden">
-          <button 
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="p-2"
-          >
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2">
             <Menu className="h-6 w-6" />
           </button>
         </div>
       </div>
       
-      {isMenuOpen && (
-        <div className="md:hidden bg-white py-4 px-4 shadow-md">
+      {isMenuOpen && <div className="md:hidden bg-white py-4 px-4 shadow-md">
           <nav className="flex flex-col space-y-4">
             <a href="#home" className="text-gray-600 hover:text-primary transition-colors">Home</a>
             <a href="#features" className="text-gray-600 hover:text-primary transition-colors">Features</a>
@@ -63,10 +52,7 @@ const Navbar = () => {
               Download
             </Button>
           </nav>
-        </div>
-      )}
-    </header>
-  );
+        </div>}
+    </header>;
 };
-
 export default Navbar;
