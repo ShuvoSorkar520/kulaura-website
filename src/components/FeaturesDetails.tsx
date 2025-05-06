@@ -1,17 +1,36 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 import { 
-  Police, 
-  Hospital, 
-  Ambulance, 
-  ShoppingBag, 
+  CheckCircle,
+  MapPin, 
+  Building2, 
+  Stethoscope, 
+  Truck, 
   UserRound, 
   School,
-  MapPin
+  ShoppingBag
 } from 'lucide-react';
 
 const FeaturesDetails = () => {
+  const [showAllServices, setShowAllServices] = React.useState(false);
+  
+  const services = [
+    { icon: <Building2 className="text-blue-500" />, name: "পুলিশ স্টেশন" },
+    { icon: <Stethoscope className="text-pink-500" />, name: "হাসপাতাল" },
+    { icon: <Truck className="text-orange-500" />, name: "ফায়ার সার্ভিস" },
+    { icon: <Truck className="text-cyan-500" />, name: "অ্যাম্বুলেন্স" },
+    { icon: <UserRound className="text-purple-500" />, name: "ডাক্তার" },
+    { icon: <ShoppingBag className="text-pink-500" />, name: "দোকান" },
+    { icon: <School className="text-green-500" />, name: "স্কুল" },
+    { icon: <MapPin className="text-red-500" />, name: "ট্যুরিস্ট স্পট" },
+    { icon: <CheckCircle className="text-yellow-500" />, name: "পাবলিক টয়লেট" },
+    { icon: <Building2 className="text-indigo-500" />, name: "সরকারি অফিস" },
+    { icon: <ShoppingBag className="text-teal-500" />, name: "মার্কেট" },
+    { icon: <Building2 className="text-gray-500" />, name: "বাস স্ট্যান্ড" }
+  ];
+
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-blue-50 to-gray-50">
       <div className="container mx-auto px-4">
@@ -25,98 +44,47 @@ const FeaturesDetails = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="md:w-1/2">
             <div className="phone-mockup mx-auto rounded-3xl overflow-hidden border-8 border-gray-800 shadow-2xl">
-              <div className="relative">
-                {/* Top train station image */}
+              <div className="relative w-full h-full">
                 <img 
                   src="/lovable-uploads/09d5264d-f4e6-4ede-bfcd-629dfe9bf4c6.png" 
                   alt="Kulabra App Interface"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
           </div>
 
           <div className="md:w-1/2">
-            <div className="bg-white rounded-xl shadow-md p-6">
-              <h3 className="text-xl font-bold text-primary mb-4">সকল সেবা একসাথে</h3>
-              <p className="text-gray-700 mb-6">
-                আপনার মহল্লায় উপলব্ধ সকল সেবা এক অ্যাপলিকেশনে। যেকোনো প্রয়োজনে এক টাচে সমাধান পান।
-              </p>
+            <Card className="bg-white rounded-xl shadow-md">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-primary mb-4">সকল সেবা একসাথে</h3>
+                <p className="text-gray-700 mb-6">
+                  আপনার মহল্লায় উপলব্ধ সকল সেবা এক অ্যাপলিকেশনে। যেকোনো প্রয়োজনে এক টাচে সমাধান পান।
+                </p>
 
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="flex items-start">
-                  <div className="bg-blue-100 rounded-full p-2 mr-4 mt-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#4285F4" className="w-4 h-4">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-medium">পুলিশ স্টেশন</h4>
-                  </div>
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  {services.slice(0, showAllServices ? services.length : 6).map((service, index) => (
+                    <div key={index} className="flex items-start">
+                      <div className="rounded-full p-2 mr-3 mt-1 bg-gray-100">
+                        {service.icon}
+                      </div>
+                      <div>
+                        <h4 className="font-medium">{service.name}</h4>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-pink-100 rounded-full p-2 mr-4 mt-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#E91E63" className="w-4 h-4">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-medium">হাসপাতাল</h4>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-orange-100 rounded-full p-2 mr-4 mt-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#FF5722" className="w-4 h-4">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-medium">ফায়ার সার্ভিস</h4>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-cyan-100 rounded-full p-2 mr-4 mt-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#00BCD4" className="w-4 h-4">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-medium">অ্যাম্বুলেন্স</h4>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-purple-100 rounded-full p-2 mr-4 mt-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#9C27B0" className="w-4 h-4">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-medium">ডাক্তার</h4>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-pink-100 rounded-full p-2 mr-4 mt-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#E91E63" className="w-4 h-4">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-medium">দোকান</h4>
-                  </div>
-                </div>
-              </div>
 
-              <div className="text-center md:text-left">
-                <Button className="bg-primary hover:bg-primary/90">
-                  সকল সেবা দেখুন
-                </Button>
-              </div>
-            </div>
+                <div className="text-center md:text-left">
+                  <Button 
+                    className="bg-primary hover:bg-primary/90"
+                    onClick={() => setShowAllServices(!showAllServices)}
+                  >
+                    {showAllServices ? "সংক্ষিপ্ত দেখুন" : "সকল সেবা দেখুন"}
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
         
