@@ -12,12 +12,12 @@ const FeaturesSection = () => {
 
         <div className="flex flex-col-reverse md:flex-row items-center justify-between">
           <div className="md:w-1/2 mt-12 md:mt-0">
-            <div className="phone-mockup mx-auto rounded-3xl overflow-hidden border-8 border-gray-800 shadow-2xl">
+            <div className="phone-mockup mx-auto rounded-3xl overflow-hidden border-8 border-gray-800 shadow-2xl" style={{ maxWidth: '300px' }}>
               <div className="phone-screen w-full h-full">
                 <img 
                   src="/lovable-uploads/d9db84df-f3da-419c-8618-a8363b6f8a22.png" 
                   alt="Kulabra App Features"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </div>

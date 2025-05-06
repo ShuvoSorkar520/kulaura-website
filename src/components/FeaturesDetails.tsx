@@ -10,7 +10,15 @@ import {
   Truck, 
   UserRound, 
   School,
-  ShoppingBag
+  ShoppingBag,
+  Ambulance,
+  Hospital,
+  BookOpen,
+  Pharmacy,
+  Car,
+  Droplets,
+  PackageOpen,
+  Restaurant
 } from 'lucide-react';
 
 const FeaturesDetails = () => {
@@ -18,17 +26,19 @@ const FeaturesDetails = () => {
   
   const services = [
     { icon: <Building2 className="text-blue-500" />, name: "পুলিশ স্টেশন" },
-    { icon: <Stethoscope className="text-pink-500" />, name: "হাসপাতাল" },
+    { icon: <Hospital className="text-pink-500" />, name: "হাসপাতাল" },
     { icon: <Truck className="text-orange-500" />, name: "ফায়ার সার্ভিস" },
-    { icon: <Truck className="text-cyan-500" />, name: "অ্যাম্বুলেন্স" },
+    { icon: <Ambulance className="text-cyan-500" />, name: "অ্যাম্বুলেন্স" },
     { icon: <UserRound className="text-purple-500" />, name: "ডাক্তার" },
     { icon: <ShoppingBag className="text-pink-500" />, name: "দোকান" },
-    { icon: <School className="text-green-500" />, name: "স্কুল" },
-    { icon: <MapPin className="text-red-500" />, name: "ট্যুরিস্ট স্পট" },
-    { icon: <CheckCircle className="text-yellow-500" />, name: "পাবলিক টয়লেট" },
-    { icon: <Building2 className="text-indigo-500" />, name: "সরকারি অফিস" },
-    { icon: <ShoppingBag className="text-teal-500" />, name: "মার্কেট" },
-    { icon: <Building2 className="text-gray-500" />, name: "বাস স্ট্যান্ড" }
+    { icon: <Restaurant className="text-yellow-500" />, name: "রেস্টুরেন্ট" },
+    { icon: <BookOpen className="text-green-500" />, name: "টিউটর" },
+    { icon: <Pharmacy className="text-red-500" />, name: "ফার্মেসি" },
+    { icon: <Car className="text-indigo-500" />, name: "রিজার্ভ ভেহিকেল" },
+    { icon: <School className="text-teal-500" />, name: "শিক্ষা প্রতিষ্ঠান" },
+    { icon: <Droplets className="text-red-600" />, name: "ব্লাড ডোনার" },
+    { icon: <PackageOpen className="text-brown-500" />, name: "কুরিয়ার সার্ভিস" },
+    { icon: <MapPin className="text-red-500" />, name: "ট্যুরিস্ট স্পট" }
   ];
 
   return (
@@ -43,12 +53,12 @@ const FeaturesDetails = () => {
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="md:w-1/2">
-            <div className="phone-mockup mx-auto rounded-3xl overflow-hidden border-8 border-gray-800 shadow-2xl">
+            <div className="phone-mockup mx-auto rounded-3xl overflow-hidden border-8 border-gray-800 shadow-2xl" style={{ maxWidth: '300px' }}>
               <div className="relative w-full h-full">
                 <img 
                   src="/lovable-uploads/09d5264d-f4e6-4ede-bfcd-629dfe9bf4c6.png" 
                   alt="Kulabra App Interface"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </div>
@@ -62,7 +72,7 @@ const FeaturesDetails = () => {
                   আপনার মহল্লায় উপলব্ধ সকল সেবা এক অ্যাপলিকেশনে। যেকোনো প্রয়োজনে এক টাচে সমাধান পান।
                 </p>
 
-                <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
                   {services.slice(0, showAllServices ? services.length : 6).map((service, index) => (
                     <div key={index} className="flex items-start">
                       <div className="rounded-full p-2 mr-3 mt-1 bg-gray-100">
