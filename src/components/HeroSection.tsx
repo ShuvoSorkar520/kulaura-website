@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
 const HeroSection = () => {
@@ -13,6 +14,14 @@ const HeroSection = () => {
     link.click();
     document.body.removeChild(link);
   };
+
+  const scrollToFeatures = () => {
+    const featuresSection = document.getElementById('features');
+    if (featuresSection) {
+      featuresSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return <section id="home" className="bg-gradient-to-b from-white to-green-50 pt-24 md:pt-28 pb-12 md:pb-20">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between">
@@ -29,7 +38,11 @@ const HeroSection = () => {
                 <Download className="h-5 w-5" />
                 অ্যাপ ডাউনলোড
               </Button>
-              <Button variant="outline" className="border-primary text-primary hover:bg-primary/10 text-lg px-8 py-6">
+              <Button 
+                variant="outline" 
+                className="border-primary text-primary hover:bg-primary/10 text-lg px-8 py-6"
+                onClick={scrollToFeatures}
+              >
                 আরও জানুন
               </Button>
             </div>
