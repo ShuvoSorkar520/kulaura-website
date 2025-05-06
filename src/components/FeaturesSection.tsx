@@ -1,21 +1,9 @@
 
 import React from 'react';
-import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Eye, EyeOff } from 'lucide-react';
+import { Heart, Award, Rocket, ThumbsUp, Smile } from 'lucide-react';
 
 const FeaturesSection = () => {
-  const [showPassword, setShowPassword] = React.useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = React.useState(false);
-  
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
-  };
-  
-  const toggleConfirmPasswordVisibility = () => {
-    setShowConfirmPassword(!showConfirmPassword);
-  };
-
   return (
     <section id="features" className="py-16 bg-white">
       <div className="container mx-auto px-4">
@@ -30,7 +18,7 @@ const FeaturesSection = () => {
               <div className="phone-screen w-full h-full">
                 <img 
                   src="/lovable-uploads/4bd78a8a-d0f8-4bc2-90aa-9ac947f9f09a.png" 
-                  alt="Kulabra App Registration"
+                  alt="Kulabra App Interface"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -39,70 +27,65 @@ const FeaturesSection = () => {
 
           <div className="w-full md:w-1/2 md:pl-12">
             <div className="max-w-md mx-auto md:mx-0">
-              <h3 className="text-2xl font-bold mb-6 text-center md:text-left">Welcome to Kulaura Hub</h3>
+              <h3 className="text-2xl font-bold mb-6 text-center md:text-left">আপনার জীবনযাত্রা আরও সহজ করুন</h3>
               <p className="text-gray-700 mb-8 text-center md:text-left">
-                Please enter the information below to register with Kulaura Hub and access all services in your neighborhood
+                KULABRA অ্যাপে স্বাগতম - আপনার মহল্লার সবকিছু এখন আপনার হাতের মুঠোয়। আমাদের অ্যাপ দিয়ে আপনার প্রয়োজনীয় সমস্ত সেবা সহজেই পেতে পারেন।
               </p>
 
-              <div className="space-y-4">
-                <div>
-                  <Input type="text" placeholder="Your Name" className="w-full" />
-                  <p className="text-xs text-gray-500 mt-1 ml-1">Enter your name</p>
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <div className="bg-green-50 p-3 rounded-full mr-4">
+                    <Heart size={24} className="text-red-500" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold mb-2">আপনার সুবিধার্থে তৈরি</h4>
+                    <p className="text-gray-600">
+                      আমাদের অ্যাপ আপনার প্রতিদিনের জীবনযাপন সহজ করার জন্য বানানো হয়েছে। এটি ব্যবহার করা সহজ এবং দ্রুত।
+                    </p>
+                  </div>
                 </div>
-                
-                <div>
-                  <Input type="email" placeholder="Email" className="w-full" />
-                  <p className="text-xs text-gray-500 mt-1 ml-1">Enter your email</p>
+
+                <div className="flex items-start">
+                  <div className="bg-blue-50 p-3 rounded-full mr-4">
+                    <ThumbsUp size={24} className="text-blue-500" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold mb-2">সর্বদা আপনার পাশে</h4>
+                    <p className="text-gray-600">
+                      জরুরি প্রয়োজনে হোক বা নিত্যদিনের সেবার জন্য, KULABRA আপনাকে সাহায্য করতে সর্বদা প্রস্তুত।
+                    </p>
+                  </div>
                 </div>
-                
-                <div className="relative">
-                  <Input 
-                    type={showPassword ? "text" : "password"} 
-                    placeholder="Password" 
-                    className="w-full pr-10" 
-                  />
-                  <button 
-                    type="button"
-                    className="absolute inset-y-0 right-0 flex items-center px-3"
-                    onClick={togglePasswordVisibility}
-                  >
-                    {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-                  </button>
-                  <p className="text-xs text-gray-500 mt-1 ml-1">Enter a Password</p>
+
+                <div className="flex items-start">
+                  <div className="bg-yellow-50 p-3 rounded-full mr-4">
+                    <Award size={24} className="text-yellow-500" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold mb-2">সেরা পরিষেবা নিশ্চিত</h4>
+                    <p className="text-gray-600">
+                      আমরা শুধু সেবা নয়, আমরা সেরা পরিষেবা দেওয়ার প্রতিশ্রুতি দেই। আপনার সন্তুষ্টিই আমাদের লক্ষ্য।
+                    </p>
+                  </div>
                 </div>
-                
-                <div className="relative">
-                  <Input 
-                    type={showConfirmPassword ? "text" : "password"} 
-                    placeholder="Confirm password" 
-                    className="w-full pr-10" 
-                  />
-                  <button 
-                    type="button"
-                    className="absolute inset-y-0 right-0 flex items-center px-3"
-                    onClick={toggleConfirmPasswordVisibility}
-                  >
-                    {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-                  </button>
-                  <p className="text-xs text-gray-500 mt-1 ml-1">Enter confirm password</p>
+
+                <div className="flex items-start">
+                  <div className="bg-green-50 p-3 rounded-full mr-4">
+                    <Smile size={24} className="text-green-500" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold mb-2">সুখী ব্যবহারকারী</h4>
+                    <p className="text-gray-600">
+                      হাজার হাজার সন্তুষ্ট ব্যবহারকারী ইতিমধ্যেই আমাদের অ্যাপকে বেছে নিয়েছেন। আপনিও আমাদের পরিবারের একজন হয়ে উঠুন।
+                    </p>
+                  </div>
                 </div>
-                
-                <div className="flex items-center">
-                  <input 
-                    type="checkbox" 
-                    id="privacy-policy" 
-                    className="rounded text-primary mr-2 h-4 w-4" 
-                  />
-                  <label htmlFor="privacy-policy" className="text-sm">
-                    I agree with <span className="text-primary font-medium">Privacy and Policy ?</span>
-                  </label>
-                </div>
-                
-                <Button className="w-full bg-green-600 hover:bg-green-700">Register</Button>
-                
-                <div className="text-center text-sm mt-4">
-                  Already have an account? <span className="text-primary cursor-pointer font-medium">Login</span>
-                </div>
+              </div>
+
+              <div className="mt-8 text-center md:text-left">
+                <Button className="bg-green-600 hover:bg-green-700 px-8 py-6 text-lg">
+                  <Rocket className="mr-2" /> অ্যাপ ডাউনলোড করুন
+                </Button>
               </div>
             </div>
           </div>
