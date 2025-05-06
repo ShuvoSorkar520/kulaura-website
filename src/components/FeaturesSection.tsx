@@ -1,7 +1,6 @@
 
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Heart, Award, Rocket, ThumbsUp, Smile } from 'lucide-react';
+import { Heart, Award, ThumbsUp, Smile } from 'lucide-react';
 
 const FeaturesSection = () => {
   return (
@@ -80,12 +79,6 @@ const FeaturesSection = () => {
                     </p>
                   </div>
                 </div>
-              </div>
-
-              <div className="mt-8 text-center md:text-left">
-                <Button className="bg-green-600 hover:bg-green-700 px-8 py-6 text-lg">
-                  <Rocket className="mr-2" /> অ্যাপ ডাউনলোড করুন
-                </Button>
               </div>
             </div>
           </div>
