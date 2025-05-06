@@ -1,6 +1,15 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { 
+  Police, 
+  Hospital, 
+  Ambulance, 
+  ShoppingBag, 
+  UserRound, 
+  School,
+  MapPin
+} from 'lucide-react';
 
 const FeaturesDetails = () => {
   return (
@@ -15,12 +24,13 @@ const FeaturesDetails = () => {
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="md:w-1/2">
-            <div className="phone-mockup mx-auto">
-              <div className="phone-screen">
+            <div className="phone-mockup mx-auto rounded-3xl overflow-hidden border-8 border-gray-800 shadow-2xl">
+              <div className="relative">
+                {/* Top train station image */}
                 <img 
-                  src="/lovable-uploads/93232a13-05aa-43dc-bf6a-5893558dad6a.png" 
-                  alt="Kulabra App Services"
-                  className="w-full h-full object-cover"
+                  src="/lovable-uploads/09d5264d-f4e6-4ede-bfcd-629dfe9bf4c6.png" 
+                  alt="Kulabra App Interface"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </div>
@@ -35,8 +45,8 @@ const FeaturesDetails = () => {
 
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="flex items-start">
-                  <div className="bg-green-100 rounded-full p-2 mr-4 mt-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#1e7e34" className="w-4 h-4">
+                  <div className="bg-blue-100 rounded-full p-2 mr-4 mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#4285F4" className="w-4 h-4">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
@@ -46,8 +56,8 @@ const FeaturesDetails = () => {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="bg-green-100 rounded-full p-2 mr-4 mt-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#1e7e34" className="w-4 h-4">
+                  <div className="bg-pink-100 rounded-full p-2 mr-4 mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#E91E63" className="w-4 h-4">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
@@ -57,8 +67,8 @@ const FeaturesDetails = () => {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="bg-green-100 rounded-full p-2 mr-4 mt-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#1e7e34" className="w-4 h-4">
+                  <div className="bg-orange-100 rounded-full p-2 mr-4 mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#FF5722" className="w-4 h-4">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
@@ -68,8 +78,8 @@ const FeaturesDetails = () => {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="bg-green-100 rounded-full p-2 mr-4 mt-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#1e7e34" className="w-4 h-4">
+                  <div className="bg-cyan-100 rounded-full p-2 mr-4 mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#00BCD4" className="w-4 h-4">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
@@ -79,8 +89,8 @@ const FeaturesDetails = () => {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="bg-green-100 rounded-full p-2 mr-4 mt-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#1e7e34" className="w-4 h-4">
+                  <div className="bg-purple-100 rounded-full p-2 mr-4 mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#9C27B0" className="w-4 h-4">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
@@ -90,8 +100,8 @@ const FeaturesDetails = () => {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="bg-green-100 rounded-full p-2 mr-4 mt-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#1e7e34" className="w-4 h-4">
+                  <div className="bg-pink-100 rounded-full p-2 mr-4 mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#E91E63" className="w-4 h-4">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
@@ -112,15 +122,8 @@ const FeaturesDetails = () => {
         
         <div className="mt-16 text-center">
           <div className="max-w-3xl mx-auto">
-            <div className="bg-white p-6 rounded-xl shadow-md">
-              <div className="flex justify-center mb-4">
-                <img 
-                  src="/lovable-uploads/93232a13-05aa-43dc-bf6a-5893558dad6a.png" 
-                  alt="Kulabra Services Bottom Banner"
-                  className="h-48 object-contain"
-                />
-              </div>
-              <h3 className="text-2xl font-bold mb-2">Finaly We Are Able!</h3>
+            <div className="bg-primary bg-opacity-10 p-6 rounded-xl shadow-md">
+              <h3 className="text-2xl font-bold mb-2 text-primary">Finaly We Are Able!</h3>
               <p className="text-gray-700">আমরা আপনার মহল্লার সকল সেবা একসাথে উপস্থাপন করতে পেরে গর্বিত</p>
             </div>
           </div>

@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const FeaturesSection = () => {
@@ -11,10 +12,10 @@ const FeaturesSection = () => {
 
         <div className="flex flex-col-reverse md:flex-row items-center justify-between">
           <div className="md:w-1/2 mt-12 md:mt-0">
-            <div className="phone-mockup mx-auto">
+            <div className="phone-mockup mx-auto rounded-3xl overflow-hidden border-8 border-gray-800 shadow-2xl">
               <div className="phone-screen">
                 <img 
-                  src="/public/lovable-uploads/d9db84df-f3da-419c-8618-a8363b6f8a22.png" 
+                  src="/lovable-uploads/d9db84df-f3da-419c-8618-a8363b6f8a22.png" 
                   alt="Kulabra App Features"
                   className="w-full h-full object-cover"
                 />
