@@ -2,6 +2,8 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { 
   CheckCircle,
   MapPin, 
@@ -22,6 +24,7 @@ import {
 
 const FeaturesDetails = () => {
   const [showAllServices, setShowAllServices] = React.useState(false);
+  const isMobile = useIsMobile();
   
   const services = [
     { icon: <Building2 className="text-blue-500" />, name: "পুলিশ স্টেশন" },
@@ -52,14 +55,14 @@ const FeaturesDetails = () => {
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="md:w-1/2">
-            <div className="phone-mockup mx-auto rounded-3xl overflow-hidden border-8 border-gray-800 shadow-2xl" style={{ maxWidth: '300px' }}>
-              <div className="relative w-full h-full">
+            <div className="phone-mockup mx-auto rounded-3xl overflow-hidden border-8 border-gray-800 shadow-2xl" style={{ maxWidth: '300px', maxHeight: '600px' }}>
+              <AspectRatio ratio={9/19}>
                 <img 
                   src="/lovable-uploads/09d5264d-f4e6-4ede-bfcd-629dfe9bf4c6.png" 
                   alt="Kulabra App Interface"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                 />
-              </div>
+              </AspectRatio>
             </div>
           </div>
 
