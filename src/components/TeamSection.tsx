@@ -1,10 +1,13 @@
+
 import { Facebook, Twitter, Instagram, Linkedin, Mail } from 'lucide-react';
+import { Button } from './ui/button';
+
 const TeamSection = () => {
   return <section id="team" className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">আমাদের <span className="text-primary">টিম</span></h2>
-          <p className="text-lg text-gray-700">কুলাউড়া হাব অ্যাপের পেছনে থাকা  টিম সদস্য</p>
+          <p className="text-lg text-gray-700">কুলাউড়া হাব অ্যাপের পেছনে থাকা  টিম সদস্য</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
@@ -19,7 +22,7 @@ const TeamSection = () => {
             <h3 className="text-2xl font-bold mb-1">Emon Das</h3>
             <p className="text-gray-600 mb-4">Creative Designer</p>
             
-            <p className="text-center text-gray-700 mb-4 max-w-xs">My Name is Emon. I’m 18 year old from Bangladesh, and Iam a UI/UX
+            <p className="text-center text-gray-700 mb-4 max-w-xs">My Name is Emon. I'm 18 year old from Bangladesh, and Iam a UI/UX
 &amp; Graphics Designer</p>
             
             <div className="bg-primary text-white rounded-md py-2 px-6 mb-4">Protfollio</div>
@@ -54,10 +57,17 @@ const TeamSection = () => {
             <h3 className="text-2xl font-bold mb-1">Shuvo Sorkar</h3>
             <p className="text-gray-600 mb-4">Android App Developer</p>
             
-            <p className="text-center text-gray-700 mb-4 max-w-xs">My Name is Shuvo. I’m from Bangladesh, and Iam a
+            <p className="text-center text-gray-700 mb-4 max-w-xs">My Name is Shuvo. I'm from Bangladesh, and Iam a
 Android App Developer</p>
             
-            <div className="bg-primary text-white rounded-md py-2 px-6 mb-4">Portfollio</div>
+            <a 
+              href="https://shuvosorkarprotfolio.netlify.app" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="bg-primary text-white rounded-md py-2 px-6 mb-4 inline-block hover:bg-primary/90 transition-colors"
+            >
+              Portfollio
+            </a>
             
             <div className="flex space-x-3">
               <a href="#" className="social-icon hover:bg-gray-200 transition-colors">
