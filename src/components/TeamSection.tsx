@@ -58,7 +58,7 @@ const TeamSection = () => {
             <div className="mb-6">
               <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-primary">
                 <img 
-                  src="/public/lovable-uploads/d9db84df-f3da-419c-8618-a8363b6f8a22.png" 
+                  src="/lovable-uploads/b5cefa95-2599-40a6-959b-9198b2fb44dd.png" 
                   alt="Shuvo Sarkar" 
                   className="w-full h-full object-cover"
                 />
