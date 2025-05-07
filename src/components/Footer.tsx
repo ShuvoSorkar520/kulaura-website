@@ -58,7 +58,12 @@ const Footer = () => {
                 <a href="#" className="text-gray-400 hover:text-primary transition-colors">টিউটোরিয়াল</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-primary transition-colors">প্রাইভেসি পলিসি</a>
+                <a href="https://sites.google.com/view/privacy-policy-kulaurahub/home" 
+                   className="text-gray-400 hover:text-primary transition-colors" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                  প্রাইভেসি পলিসি
+                </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-primary transition-colors">টার্মস অ্যান্ড কন্ডিশন</a>
