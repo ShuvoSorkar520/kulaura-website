@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
             <h3 className="text-xl font-bold mb-4">Kulabra App</h3>
             <p className="text-gray-400 mb-4">
@@ -64,29 +64,6 @@ const Footer = () => {
                 <a href="#" className="text-gray-400 hover:text-primary transition-colors">টার্মস অ্যান্ড কন্ডিশন</a>
               </li>
             </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-xl font-bold mb-4">ডাউনলোড</h3>
-            <p className="text-gray-400 mb-4">
-              আমাদের মোবাইল অ্যাপ নিন ও সহজেই সব সুবিধা পান।
-            </p>
-            <div className="space-y-3">
-              <a href="#" className="block">
-                <img 
-                  src="/placeholder.svg" 
-                  alt="App Store" 
-                  className="h-10 object-contain"
-                />
-              </a>
-              <a href="#" className="block">
-                <img 
-                  src="/placeholder.svg" 
-                  alt="Google Play" 
-                  className="h-10 object-contain"
-                />
-              </a>
-            </div>
           </div>
         </div>
         
