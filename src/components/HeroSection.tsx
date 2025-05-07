@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
 const HeroSection = () => {
@@ -14,20 +13,20 @@ const HeroSection = () => {
     link.click();
     document.body.removeChild(link);
   };
-
   const scrollToFeatures = () => {
     const featuresSection = document.getElementById('features');
     if (featuresSection) {
-      featuresSection.scrollIntoView({ behavior: 'smooth' });
+      featuresSection.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
   return <section id="home" className="bg-gradient-to-b from-white to-green-50 pt-24 md:pt-28 pb-12 md:pb-20">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              আপনার <span className="text-primary">মহল্লার</span> <br />
+              আপনার <span className="text-primary">শহরের </span> <br />
               সবকিছু <span className="text-primary">স্মার্ট অ্যাপ</span>
             </h1>
             <p className="text-lg text-gray-700 mb-8 max-w-md mx-auto md:mx-0">
@@ -38,11 +37,7 @@ const HeroSection = () => {
                 <Download className="h-5 w-5" />
                 অ্যাপ ডাউনলোড
               </Button>
-              <Button 
-                variant="outline" 
-                className="border-primary text-primary hover:bg-primary/10 text-lg px-8 py-6"
-                onClick={scrollToFeatures}
-              >
+              <Button variant="outline" className="border-primary text-primary hover:bg-primary/10 text-lg px-8 py-6" onClick={scrollToFeatures}>
                 আরও জানুন
               </Button>
             </div>

@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-6">
           <a href="#home" className="text-gray-600 hover:text-primary transition-colors">Home</a>
           <a href="#features" className="text-gray-600 hover:text-primary transition-colors">Features</a>
-          <a href="#login" className="text-gray-600 hover:text-primary transition-colors">Login</a>
+          
           <a href="#team" className="text-gray-600 hover:text-primary transition-colors">Team</a>
           <a href="#contact" className="text-gray-600 hover:text-primary transition-colors">Contact</a>
           <Button onClick={handleDownload} className="bg-primary hover:bg-primary/90 flex items-center gap-2">
