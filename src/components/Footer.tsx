@@ -7,7 +7,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Kulaura Hub</h3>
             <p className="text-gray-400 mb-4">আপনার শহরের সকল সুবিধা এবং তথ্য এখন আপনার হাতের মুঠোয়। ডাউনলোড করুন আমাদের অ্যাপ!</p>
             <div className="flex space-x-3">
-              <a href="#" className="hover:text-primary transition-colors">
+              <a href="https://www.facebook.com/groups/1839710433438890" className="hover:text-primary transition-colors">
                 <Facebook size={20} />
               </a>
               <a href="#" className="hover:text-primary transition-colors">
@@ -66,7 +66,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-800 pt-8">
           <p className="text-center text-gray-500">
-            &copy; {new Date().getFullYear()} Kulabra App. All rights reserved.
+            &copy; {new Date().getFullYear()} Kulaura Hub. All rights reserved.
           </p>
         </div>
       </div>
