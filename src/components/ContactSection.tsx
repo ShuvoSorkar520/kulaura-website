@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -14,7 +15,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
-import Map from './Map';
 
 // Define the schema for form validation
 const formSchema = z.object({
@@ -197,10 +197,6 @@ const ContactSection = () => {
                     শনি - রবি: সকাল ১০টা - দুপুর ১টা
                   </p>
                 </div>
-              </div>
-
-              <div className="mt-8 h-40">
-                <Map />
               </div>
             </div>
           </div>
