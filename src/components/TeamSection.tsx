@@ -25,7 +25,14 @@ const TeamSection = () => {
             <p className="text-center text-gray-700 mb-4 max-w-xs">My Name is Emon. I'm 18 year old from Bangladesh, and Iam a UI/UX
 &amp; Graphics Designer</p>
             
-            <div className="bg-primary text-white rounded-md py-2 px-6 mb-4">Protfollio</div>
+            <a 
+              href="https://www.behance.net/emondas29" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="bg-primary text-white rounded-md py-2 px-6 mb-4 inline-block hover:bg-primary/90 transition-colors"
+            >
+              Protfollio
+            </a>
             
             <div className="flex space-x-3">
               <a href="#" className="social-icon hover:bg-gray-200 transition-colors">
