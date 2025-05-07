@@ -1,9 +1,6 @@
-
 import { Facebook, Twitter, Instagram, Linkedin, Mail } from 'lucide-react';
-
 const TeamSection = () => {
-  return (
-    <section id="team" className="py-16 md:py-24">
+  return <section id="team" className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">আমাদের <span className="text-primary">টিম</span></h2>
@@ -15,11 +12,7 @@ const TeamSection = () => {
           <div className="flex flex-col items-center">
             <div className="mb-6">
               <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-primary">
-                <img 
-                  src="/lovable-uploads/109486a0-a134-4a30-b4ca-5edc14f33b2e.png" 
-                  alt="Emon Das" 
-                  className="w-full h-full object-cover"
-                />
+                <img src="/lovable-uploads/109486a0-a134-4a30-b4ca-5edc14f33b2e.png" alt="Emon Das" className="w-full h-full object-cover" />
               </div>
             </div>
             
@@ -57,11 +50,7 @@ const TeamSection = () => {
           <div className="flex flex-col items-center">
             <div className="mb-6">
               <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-primary">
-                <img 
-                  src="/lovable-uploads/b5cefa95-2599-40a6-959b-9198b2fb44dd.png" 
-                  alt="Shuvo Sarkar" 
-                  className="w-full h-full object-cover"
-                />
+                <img src="/lovable-uploads/b5cefa95-2599-40a6-959b-9198b2fb44dd.png" alt="Shuvo Sarkar" className="w-full h-full object-cover" />
               </div>
             </div>
             
@@ -80,12 +69,8 @@ const TeamSection = () => {
               <a href="#" className="social-icon hover:bg-gray-200 transition-colors">
                 <Facebook size={16} />
               </a>
-              <a href="#" className="social-icon hover:bg-gray-200 transition-colors">
-                <Twitter size={16} />
-              </a>
-              <a href="#" className="social-icon hover:bg-gray-200 transition-colors">
-                <Instagram size={16} />
-              </a>
+              
+              
               <a href="#" className="social-icon hover:bg-gray-200 transition-colors">
                 <Linkedin size={16} />
               </a>
@@ -96,8 +81,6 @@ const TeamSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default TeamSection;

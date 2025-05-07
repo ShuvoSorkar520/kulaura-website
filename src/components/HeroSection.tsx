@@ -27,7 +27,7 @@ const HeroSection = () => {
           <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               আপনার <span className="text-primary">শহরের </span> <br />
-              সবকিছু <span className="text-primary">স্মার্ট অ্যাপ</span>
+              সবকিছু <span className="text-primary">স্মার্ট অ্যাপে </span>
             </h1>
             <p className="text-lg text-gray-700 mb-8 max-w-md mx-auto md:mx-0">
               আপনার মহল্লার সকল সুবিধা এবং তথ্য এখন আপনার হাতের মুঠোয়। ডাউনলোড করুন আমাদের অ্যাপ!
