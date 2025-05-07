@@ -13,7 +13,7 @@ const FeaturesSection = () => {
 
         <div className="flex flex-col-reverse md:flex-row items-center justify-between">
           <div className="w-full md:w-1/2 mt-12 md:mt-0">
-            <div className="phone-mockup mx-auto rounded-3xl overflow-hidden border-8 border-gray-800 shadow-2xl" style={{ maxWidth: '300px' }}>
+            <div className="phone-mockup mx-auto rounded-3xl overflow-hidden shadow-xl" style={{ maxWidth: '300px' }}>
               <div className="phone-screen w-full h-full">
                 <img 
                   src="/lovable-uploads/4bd78a8a-d0f8-4bc2-90aa-9ac947f9f09a.png" 

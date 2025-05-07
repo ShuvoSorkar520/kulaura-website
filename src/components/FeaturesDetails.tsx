@@ -55,7 +55,7 @@ const FeaturesDetails = () => {
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="md:w-1/2">
-            <div className="phone-mockup mx-auto rounded-3xl overflow-hidden border-8 border-gray-800 shadow-2xl" style={{ maxWidth: '300px', maxHeight: '600px' }}>
+            <div className="phone-mockup mx-auto rounded-3xl overflow-hidden shadow-xl" style={{ maxWidth: '300px', maxHeight: '600px' }}>
               <AspectRatio ratio={9/19}>
                 <img 
                   src="/lovable-uploads/09d5264d-f4e6-4ede-bfcd-629dfe9bf4c6.png" 
