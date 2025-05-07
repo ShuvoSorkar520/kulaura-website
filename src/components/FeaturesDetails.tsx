@@ -1,50 +1,56 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
-import { 
-  CheckCircle,
-  MapPin, 
-  Building2, 
-  Stethoscope, 
-  Truck, 
-  UserRound, 
-  School,
-  ShoppingBag,
-  Ambulance,
-  Building,
-  BookOpen,
-  Pill,
-  Car,
-  Droplets,
-  Package
-} from 'lucide-react';
-
+import { CheckCircle, MapPin, Building2, Stethoscope, Truck, UserRound, School, ShoppingBag, Ambulance, Building, BookOpen, Pill, Car, Droplets, Package } from 'lucide-react';
 const FeaturesDetails = () => {
   const [showAllServices, setShowAllServices] = React.useState(false);
   const isMobile = useIsMobile();
-  
-  const services = [
-    { icon: <Building2 className="text-blue-500" />, name: "পুলিশ স্টেশন" },
-    { icon: <Building className="text-pink-500" />, name: "হাসপাতাল" },
-    { icon: <Truck className="text-orange-500" />, name: "ফায়ার সার্ভিস" },
-    { icon: <Ambulance className="text-cyan-500" />, name: "অ্যাম্বুলেন্স" },
-    { icon: <UserRound className="text-purple-500" />, name: "ডাক্তার" },
-    { icon: <ShoppingBag className="text-pink-500" />, name: "দোকান" },
-    { icon: <Truck className="text-yellow-500" />, name: "রেস্টুরেন্ট" },
-    { icon: <BookOpen className="text-green-500" />, name: "টিউটর" },
-    { icon: <Pill className="text-red-500" />, name: "ফার্মেসি" },
-    { icon: <Car className="text-indigo-500" />, name: "রিজার্ভ ভেহিকেল" },
-    { icon: <School className="text-teal-500" />, name: "শিক্ষা প্রতিষ্ঠান" },
-    { icon: <Droplets className="text-red-600" />, name: "ব্লাড ডোনার" },
-    { icon: <Package className="text-brown-500" />, name: "কুরিয়ার সার্ভিস" },
-    { icon: <MapPin className="text-red-500" />, name: "ট্যুরিস্ট স্পট" }
-  ];
-
-  return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-blue-50 to-gray-50">
+  const services = [{
+    icon: <Building2 className="text-blue-500" />,
+    name: "পুলিশ স্টেশন"
+  }, {
+    icon: <Building className="text-pink-500" />,
+    name: "হাসপাতাল"
+  }, {
+    icon: <Truck className="text-orange-500" />,
+    name: "ফায়ার সার্ভিস"
+  }, {
+    icon: <Ambulance className="text-cyan-500" />,
+    name: "অ্যাম্বুলেন্স"
+  }, {
+    icon: <UserRound className="text-purple-500" />,
+    name: "ডাক্তার"
+  }, {
+    icon: <ShoppingBag className="text-pink-500" />,
+    name: "দোকান"
+  }, {
+    icon: <Truck className="text-yellow-500" />,
+    name: "রেস্টুরেন্ট"
+  }, {
+    icon: <BookOpen className="text-green-500" />,
+    name: "টিউটর"
+  }, {
+    icon: <Pill className="text-red-500" />,
+    name: "ফার্মেসি"
+  }, {
+    icon: <Car className="text-indigo-500" />,
+    name: "রিজার্ভ ভেহিকেল"
+  }, {
+    icon: <School className="text-teal-500" />,
+    name: "শিক্ষা প্রতিষ্ঠান"
+  }, {
+    icon: <Droplets className="text-red-600" />,
+    name: "ব্লাড ডোনার"
+  }, {
+    icon: <Package className="text-brown-500" />,
+    name: "কুরিয়ার সার্ভিস"
+  }, {
+    icon: <MapPin className="text-red-500" />,
+    name: "ট্যুরিস্ট স্পট"
+  }];
+  return <section className="py-16 md:py-24 bg-gradient-to-b from-blue-50 to-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -55,13 +61,12 @@ const FeaturesDetails = () => {
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="md:w-1/2">
-            <div className="phone-mockup mx-auto rounded-3xl overflow-hidden shadow-xl" style={{ maxWidth: '300px', maxHeight: '600px' }}>
-              <AspectRatio ratio={9/19}>
-                <img 
-                  src="/lovable-uploads/09d5264d-f4e6-4ede-bfcd-629dfe9bf4c6.png" 
-                  alt="Kulabra App Interface"
-                  className="w-full h-full object-cover"
-                />
+            <div className="phone-mockup mx-auto rounded-3xl overflow-hidden shadow-xl" style={{
+            maxWidth: '300px',
+            maxHeight: '600px'
+          }}>
+              <AspectRatio ratio={9 / 19}>
+                <img src="/lovable-uploads/09d5264d-f4e6-4ede-bfcd-629dfe9bf4c6.png" alt="Kulabra App Interface" className="w-full h-full object-cover" />
               </AspectRatio>
             </div>
           </div>
@@ -75,23 +80,18 @@ const FeaturesDetails = () => {
                 </p>
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
-                  {services.slice(0, showAllServices ? services.length : 6).map((service, index) => (
-                    <div key={index} className="flex items-start">
+                  {services.slice(0, showAllServices ? services.length : 6).map((service, index) => <div key={index} className="flex items-start">
                       <div className="rounded-full p-2 mr-3 mt-1 bg-gray-100">
                         {service.icon}
                       </div>
                       <div>
                         <h4 className="font-medium">{service.name}</h4>
                       </div>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
 
                 <div className="text-center md:text-left">
-                  <Button 
-                    className="bg-primary hover:bg-primary/90"
-                    onClick={() => setShowAllServices(!showAllServices)}
-                  >
+                  <Button className="bg-primary hover:bg-primary/90" onClick={() => setShowAllServices(!showAllServices)}>
                     {showAllServices ? "সংক্ষিপ্ত দেখুন" : "সকল সেবা দেখুন"}
                   </Button>
                 </div>
@@ -104,13 +104,11 @@ const FeaturesDetails = () => {
           <div className="max-w-3xl mx-auto">
             <div className="bg-primary bg-opacity-10 p-6 rounded-xl shadow-md">
               <h3 className="text-2xl font-bold mb-2 text-primary">Finaly We Are Able!</h3>
-              <p className="text-gray-700">আমরা আপনার মহল্লার সকল সেবা একসাথে উপস্থাপন করতে পেরে গর্বিত</p>
+              <p className="text-gray-700">আমরা আপনার শহরের সকল সেবা একসাথে উপস্থাপন করতে পেরে গর্বিত</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default FeaturesDetails;

@@ -29,9 +29,7 @@ const HeroSection = () => {
               আপনার <span className="text-primary">শহরের </span> <br />
               সবকিছু <span className="text-primary">স্মার্ট অ্যাপে </span>
             </h1>
-            <p className="text-lg text-gray-700 mb-8 max-w-md mx-auto md:mx-0">
-              আপনার মহল্লার সকল সুবিধা এবং তথ্য এখন আপনার হাতের মুঠোয়। ডাউনলোড করুন আমাদের অ্যাপ!
-            </p>
+            <p className="text-lg text-gray-700 mb-8 max-w-md mx-auto md:mx-0">আপনার শহরের সকল সুবিধা এবং তথ্য এখন আপনার হাতের মুঠোয়। ডাউনলোড করুন আমাদের অ্যাপ!</p>
             <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
               <Button onClick={handleDownload} className="bg-primary hover:bg-primary/90 text-lg px-8 py-6 flex items-center gap-2">
                 <Download className="h-5 w-5" />

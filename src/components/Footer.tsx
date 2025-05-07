@@ -1,16 +1,11 @@
-
 import { Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
-
 const Footer = () => {
-  return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8">
+  return <footer className="bg-gray-900 text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
-            <h3 className="text-xl font-bold mb-4">Kulabra App</h3>
-            <p className="text-gray-400 mb-4">
-              আপনার মহল্লার সকল সুবিধা এবং তথ্য এখন আপনার হাতের মুঠোয়। ডাউনলোড করুন আমাদের অ্যাপ!
-            </p>
+            <h3 className="text-xl font-bold mb-4">Kulaura Hub</h3>
+            <p className="text-gray-400 mb-4">আপনার শহরের সকল সুবিধা এবং তথ্য এখন আপনার হাতের মুঠোয়। ডাউনলোড করুন আমাদের অ্যাপ!</p>
             <div className="flex space-x-3">
               <a href="#" className="hover:text-primary transition-colors">
                 <Facebook size={20} />
@@ -58,10 +53,7 @@ const Footer = () => {
                 <a href="#" className="text-gray-400 hover:text-primary transition-colors">টিউটোরিয়াল</a>
               </li>
               <li>
-                <a href="https://sites.google.com/view/privacy-policy-kulaurahub/home" 
-                   className="text-gray-400 hover:text-primary transition-colors" 
-                   target="_blank" 
-                   rel="noopener noreferrer">
+                <a href="https://sites.google.com/view/privacy-policy-kulaurahub/home" className="text-gray-400 hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">
                   প্রাইভেসি পলিসি
                 </a>
               </li>
@@ -78,8 +70,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
