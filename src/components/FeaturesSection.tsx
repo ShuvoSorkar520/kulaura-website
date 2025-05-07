@@ -7,7 +7,7 @@ const FeaturesSection = () => {
     <section id="features" className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">KULABRA <span className="text-primary">-আপনার মহল্লার</span></h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">KULAURA HUB <span className="text-primary">-আপনার শহরে</span></h2>
           <p className="text-lg text-gray-700">এক স্মার্ট লিভিং</p>
         </div>
 
@@ -28,7 +28,7 @@ const FeaturesSection = () => {
             <div className="max-w-md mx-auto md:mx-0">
               <h3 className="text-2xl font-bold mb-6 text-center md:text-left">আপনার জীবনযাত্রা আরও সহজ করুন</h3>
               <p className="text-gray-700 mb-8 text-center md:text-left">
-                KULABRA অ্যাপে স্বাগতম - আপনার মহল্লার সবকিছু এখন আপনার হাতের মুঠোয়। আমাদের অ্যাপ দিয়ে আপনার প্রয়োজনীয় সমস্ত সেবা সহজেই পেতে পারেন।
+                KULAURA HUB অ্যাপে স্বাগতম - আপনার শহরের সবকিছু এখন আপনার হাতের মুঠোয়। আমাদের অ্যাপ দিয়ে আপনার প্রয়োজনীয় সমস্ত সেবা সহজেই পেতে পারেন।
               </p>
 
               <div className="space-y-6">
