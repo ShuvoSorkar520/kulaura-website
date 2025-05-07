@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -15,6 +14,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
+import Map from './Map';
 
 // Define the schema for form validation
 const formSchema = z.object({
@@ -53,7 +53,7 @@ const ContactSection = () => {
       // Show success message
       toast({
         title: "সফলভাবে পাঠানো হয়েছে",
-        description: "আপনার মেসেজ সফলভাবে পাঠানো হয়েছে। আমরা শীঘ্রই আপনার সাথে যোগাযোগ করব।",
+        description: "আপনার মেসেজ সফলভাবে পাঠা��ো হয়েছে। আমরা শীঘ্রই আপনার সাথে যোগাযোগ করব।",
       });
       
       // Reset form
@@ -199,10 +199,8 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              <div className="mt-8">
-                <div className="h-40 bg-gray-200 rounded-md flex items-center justify-center">
-                  <p className="text-gray-500">মানচিত্র এখানে দেখানো হবে</p>
-                </div>
+              <div className="mt-8 h-40">
+                <Map />
               </div>
             </div>
           </div>
