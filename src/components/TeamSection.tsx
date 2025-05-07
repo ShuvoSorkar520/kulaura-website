@@ -35,19 +35,19 @@ const TeamSection = () => {
             </a>
             
             <div className="flex space-x-3">
-              <a href="#" className="social-icon hover:bg-gray-200 transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=100037052358181&mibextid=JRoKGi" className="social-icon hover:bg-gray-200 transition-colors">
                 <Facebook size={16} />
               </a>
-              <a href="#" className="social-icon hover:bg-gray-200 transition-colors">
+              <a href="https://www.twitter.com/@EmonDas29" className="social-icon hover:bg-gray-200 transition-colors">
                 <Twitter size={16} />
               </a>
-              <a href="#" className="social-icon hover:bg-gray-200 transition-colors">
+              <a href="https://www.instagram.com/emontrd29" className="social-icon hover:bg-gray-200 transition-colors">
                 <Instagram size={16} />
               </a>
-              <a href="#" className="social-icon hover:bg-gray-200 transition-colors">
+              <a href="https://www.linkedin.com/in/emon-designer-921a7a308" className="social-icon hover:bg-gray-200 transition-colors">
                 <Linkedin size={16} />
               </a>
-              <a href="#" className="social-icon hover:bg-gray-200 transition-colors">
+              <a href="scenecomedy258@gmail.com" className="social-icon hover:bg-gray-200 transition-colors">
                 <Mail size={16} />
               </a>
             </div>
@@ -77,15 +77,15 @@ Android App Developer</p>
             </a>
             
             <div className="flex space-x-3">
-              <a href="#" className="social-icon hover:bg-gray-200 transition-colors">
+              <a href="https://www.facebook.com/shuvo.sorkar.758" className="social-icon hover:bg-gray-200 transition-colors">
                 <Facebook size={16} />
               </a>
               
               
-              <a href="#" className="social-icon hover:bg-gray-200 transition-colors">
+              <a href="https://www.linkedin.com/in/shuvo-sorkar-1840ab30a" className="social-icon hover:bg-gray-200 transition-colors">
                 <Linkedin size={16} />
               </a>
-              <a href="#" className="social-icon hover:bg-gray-200 transition-colors">
+              <a href="shuvosorkar45@gmail.com" className="social-icon hover:bg-gray-200 transition-colors">
                 <Mail size={16} />
               </a>
             </div>
