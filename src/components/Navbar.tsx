@@ -5,12 +5,12 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleDownload = () => {
     // Path to the app file in the public folder
-    const downloadUrl = '/kulabra-app.apk';
+    const downloadUrl = '/kulauraHub.apk';
 
     // Create an anchor element and trigger the download
     const link = document.createElement('a');
     link.href = downloadUrl;
-    link.download = 'kulabra-app.apk';
+    link.download = 'kulauraHub.apk';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
