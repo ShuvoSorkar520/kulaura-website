@@ -5,7 +5,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleDownload = () => {
     // Path to the app file in the public folder
-    const downloadUrl = 'https://drive.google.com/uc?export=download&id=1zQvrCpj0yrWp381Yv-u3UNbYbmSv0B95';
+    const downloadUrl = 'https://github.com/ShuvoSorkar520/kulaura-website/releases/download/v1.0.0/kulauraHub.apk';
 
     // Create an anchor element and trigger the download
     const link = document.createElement('a');
